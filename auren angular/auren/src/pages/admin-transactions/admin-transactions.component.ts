@@ -23,7 +23,6 @@ export class AdminTransactionsComponent implements OnInit {
   to: string = this.getDate(0);
   limit = 50;
 
-  // ➜ agora o tipo bate com o @Input do form
   editing: TxEditable | null = null;
 
   ngOnInit(): void { this.load(); }

@@ -21,5 +21,5 @@ public class InsightSnapshot {
     private Instant createdAt;
 
     @Column(name="tx_hash", length = 64, nullable=false)
-    private String txHash; // <<< novo
+    private String txHash;
 }

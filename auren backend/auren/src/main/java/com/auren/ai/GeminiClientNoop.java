@@ -1,4 +1,3 @@
-// src/main/java/com/auren/ai/GeminiClientNoop.java
 package com.auren.ai;
 
 public class GeminiClientNoop implements GeminiClient {

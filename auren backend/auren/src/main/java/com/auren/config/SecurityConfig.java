@@ -32,15 +32,15 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(
             HttpSecurity http,
-            JwtAuthFilter jwtAuthFilter,           // <-- recebido como parâmetro (não é campo!)
-            RestAuthEntryPoint authEntryPoint     // <-- idem
+            JwtAuthFilter jwtAuthFilter,
+            RestAuthEntryPoint authEntryPoint
     ) throws Exception {
 
         http
             .cors(Customizer.withDefaults())
             .csrf(csrf -> csrf.disable())
             .headers(h -> h
-                .frameOptions(f -> f.sameOrigin()) // liberar H2 console
+                .frameOptions(f -> f.sameOrigin())
                 .addHeaderWriter(new XFrameOptionsHeaderWriter(
                         XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN))
             )

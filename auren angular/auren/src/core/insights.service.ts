@@ -22,7 +22,6 @@ export class InsightsService {
     return this.http.get<InsightsBundle>(`${this.base}/users/${id}/insights`, { params });
   }
 
-  // alias simples caso algum lugar use get()
   get(): Observable<InsightsBundle> {
     return this.getInsights();
   }

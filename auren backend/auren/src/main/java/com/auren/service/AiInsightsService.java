@@ -1,4 +1,3 @@
-// src/main/java/com/auren/service/AiInsightsService.java
 package com.auren.service;
 
 import com.auren.ai.GeminiClient;

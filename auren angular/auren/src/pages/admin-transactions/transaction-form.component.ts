@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TransactionCreate, TxType } from '../../models/transaction.model';
 
-// ➜ tipo usado entre lista e formulário
 export type TxEditable = TransactionCreate & { id?: number };
 
 @Component({
@@ -14,7 +13,6 @@ export type TxEditable = TransactionCreate & { id?: number };
   styleUrls: ['./transaction-form.component.scss'],
 })
 export class TransactionFormComponent {
-  // manter uma cópia editável interna
   form: TxEditable | null = null;
 
   private _model: TxEditable | null = null;
@@ -22,7 +20,7 @@ export class TransactionFormComponent {
   get model(): TxEditable | null { return this._model; }
   set model(v: TxEditable | null) {
     this._model = v;
-    this.form = v ? { ...v } : null; // clona para evitar mutação direta
+    this.form = v ? { ...v } : null;
   }
 
   @Output() save = new EventEmitter<TxEditable>();
@@ -41,7 +39,6 @@ export class TransactionFormComponent {
     }
   }
 
-  // Também garanta que ao cancelar o form seja limpo
   onCancel() {
     this.cancel.emit();
     this.form = null;

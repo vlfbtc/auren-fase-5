@@ -1,4 +1,3 @@
-// src/main/java/com/auren/config/AiConfig.java
 package com.auren.config;
 
 import com.auren.ai.GeminiClient;

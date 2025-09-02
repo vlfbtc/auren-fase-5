@@ -1,4 +1,3 @@
-// src/main/java/com/auren/ai/GeminiClientImpl.java
 package com.auren.ai;
 
 import com.google.genai.Client;
@@ -39,7 +38,6 @@ public class GeminiClientImpl implements GeminiClient {
 
         log.info("[Gemini] OK em {} ms  bytes={}", ms, (txt == null ? 0 : txt.length()));
         if (txt == null || txt.isBlank()) return "{}";
-        // Mostra só um pedaço para depuração
         log.debug("[Gemini] preview: {}", txt.substring(0, Math.min(200, txt.length())));
         return txt;
     }

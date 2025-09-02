@@ -1,4 +1,3 @@
-// src/main/java/com/auren/controller/InsightController.java
 package com.auren.controller;
 
 import com.auren.security.UserPrincipal;

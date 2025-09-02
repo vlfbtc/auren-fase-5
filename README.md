@@ -33,10 +33,6 @@ Repositório monolítico contendo três projetos integrados para uma solução d
    flutter pub get
    flutter run
    ```
-3. Para rodar no navegador:
-   ```sh
-   flutter run -d chrome
-   ```
 
 Mais detalhes: [`auren flutter/auren/README.md`](auren%20flutter/auren/README.md)
 
